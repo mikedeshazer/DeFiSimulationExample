@@ -1,0 +1,34 @@
+{
+  "name": "defi-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./utils/utils/test-chain.js",
+    "migrate": "truffle migrate --reset --network test",
+    "migrate-and-test": "npm run migrate && npm test"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "./utils/utils/test-environment.js",
+    "testTimeout": 120000
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.0",
+    "@studydefi/money-legos": "^2.1.0",
+    "@truffle/hdwallet-provider": "^1.0.34",
+    "dotenv": "^8.2.0",
+    "ethers": "^4.0.46",
+    "mocha": ""
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.9.1",
+    "ganache-core": "^2.10.2",
+    "jest": "^25.4.0",
+    "truffle": "^5.1.22"
+  }
+}
