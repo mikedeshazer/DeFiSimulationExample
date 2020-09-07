@@ -1,5 +1,10 @@
 require("dotenv").config();
+var yourArchiveNodeURL = "INSERT HERE";
+var yourPrivateKey = "INSERT HERE or get env var";
+if(yourArchiveNodeURL == "INSERT HERE"){
+  console.log("Oops! Set your archive node and private key! This won't work well for you unless you update truffle js!!")
 
+}
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 // let truffle know what chain to migrate your contracts to
@@ -8,23 +13,23 @@ module.exports = {
 
     development:  {
     //  skipDryRun: true,
-      host: "https://sandbox.truffleteams.com/a51728fe-360e-4bc7-a57e-2d91461f8d22",
+      host: yourArchiveNodeURL,
       networkCheckTimeout: 10000,
       port: 443,
       network_id: "*",
       provider: () => new HDWalletProvider(
-        "van slow kid seminar divorce group mask forget vibrant where evidence harvest",
-        "https://sandbox.truffleteams.com/a51728fe-360e-4bc7-a57e-2d91461f8d22",
+        yourPrivateKey,
+        yourArchiveNodeURL,
       )},
     test: {
     //  skipDryRun: true,
-      host: "https://sandbox.truffleteams.com/a51728fe-360e-4bc7-a57e-2d91461f8d22",
+      host: yourArchiveNodeURL,
       networkCheckTimeout: 10000,
       port: 443,
       network_id: "*",
       provider: () => new HDWalletProvider(
-        "van slow kid seminar divorce group mask forget vibrant where evidence harvest",
-        "https://sandbox.truffleteams.com/a51728fe-360e-4bc7-a57e-2d91461f8d22",
+        yourPrivateKey,
+        yourArchiveNodeURL,
       ),
     },
   },

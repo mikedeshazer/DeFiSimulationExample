@@ -1,7 +1,9 @@
-# DeFi simulation test
+# DeFi Simulation Example
 
 ## Notes
 
-You will need your own Endpoint set in truffle-config (Use your Truffle Teams mainnet fork info or archivenode data)
+Make sure to set your archive node endpoint and private key in truffle-config.js! (Use your Truffle Teams mainnet fork info or archive node data)
 
-If you use archive node, then your private key should point to an account that had funds at the block you specify
+Also, make sure you `npm install` before running this example
+
+If you use an archive node that's not from Truffle, then your private key should point to an account that had funds at the block you specified as your forked block
